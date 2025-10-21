@@ -7,19 +7,19 @@
   <title>Devora — IT Solutions, Web & Software Development Agency</title>
   <meta name="description" content="Devora is a premium IT solutions provider delivering web development, software, mobile apps, UI/UX, SEO, and brand experiences that drive growth.">
   <meta name="keywords" content="Devora, IT solutions, web development, software development, mobile app development, UI/UX, SEO services, digital agency">
-  <link rel="canonical" href="https://devora.onrender.com/">
+  <link rel="canonical" href="https://devoraofficial.onrender.com/">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Devora">
   <meta property="og:title" content="Devora — IT Solutions, Web & Software Development Agency">
   <meta property="og:description" content="Premium IT solutions: websites, software, mobile apps, UI/UX, SEO. Results-focused delivery by Devora.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://devora.onrender.com/">
-  <meta property="og:image" content="assets/img/logo.png">
+  <meta property="og:url" content="https://devoraofficial.onrender.com/">
+  <meta property="og:image" content="https://devoraofficial.onrender.com/assets/img/logo.png">
   <meta property="og:image:alt" content="Devora Logo">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Devora — IT Solutions, Web & Software Development Agency">
   <meta name="twitter:description" content="Premium IT solutions: websites, software, mobile apps, UI/UX, SEO. Results-focused delivery by Devora.">
-  <meta name="twitter:image" content="assets/img/logo.png">
+  <meta name="twitter:image" content="https://devoraofficial.onrender.com/assets/img/logo.png">
   <meta name="theme-color" content="#0ea28e">
 
   <script type="application/ld+json">
@@ -27,13 +27,13 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Devora",
-    "url": "https://devora.onrender.com/",
-    "logo": "https://devora.onrender.com/assets/img/logo.png",
+    "url": "https://devoraofficial.onrender.com/",
+    "logo": "https://devoraofficial.onrender.com/assets/img/logo.png",
     "sameAs": [],
     "contactPoint": [{
       "@type": "ContactPoint",
       "contactType": "customer support",
-      "email": "official.devora11@gmail.com",
+      "email": "devoraofficial11@gmail.com",
       "telephone": "+91-9104804873"
     }]
   }
@@ -43,7 +43,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "url": "https://devora.onrender.com/",
+    "url": "https://devoraofficial.onrender.com/",
     "name": "Devora",
     "potentialAction": {
       "@type": "SearchAction",
@@ -654,7 +654,7 @@
               <div class="faq-item">
                 <h3>How can I direct contact Devora?</h3>
                 <div class="faq-content">
-                  <p>For any inquiries or support, please contact us at <a href="mailto:official.devora.com@gmail.com">official.devora11@gmail.com</a> or call us at +91 9104804873.</p>
+                  <p>For any inquiries or support, please contact us at <a href="mailto:devoraofficial11@gmail.com">devoraofficial11@gmail.com</a> or call us at +91 9104804873.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
@@ -700,7 +700,7 @@
               <div class="contact-info mt-5">
                 <div class="info-item d-flex mb-3" data-aos="fade-up" data-aos-delay="300">
                   <i class="bi bi-envelope-at me-3"></i>
-                  <span>official.devora11@gmail.com</span>
+                  <span>devoraofficial11@gmail.com</span>
                 </div>
 
                 <div class="info-item d-flex mb-3" data-aos="fade-up" data-aos-delay="400">
@@ -801,8 +801,8 @@
 
         <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
           <h4>Contact Us</h4>
-          <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-          <p><strong>Email:</strong> <span>info@example.com</span></p>
+          <p class="mt-4"><strong>Phone:</strong> <span>+91 91048 04873</span></p>
+          <p><strong>Email:</strong> <span>devoraofficial11@gmail.com</span></p>
         </div>
 
       </div>
@@ -837,9 +837,11 @@
         e.preventDefault();
         hide(sent); hide(error); show(loading);
         var fd = new FormData(form);
-        fetch(form.getAttribute('action') || 'forms/contact.php', {
+        var body = new URLSearchParams(fd).toString();
+        fetch(form.getAttribute('action') || '/contact', {
           method: 'POST',
-          body: fd
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
+          body: body
         }).then(function(res){
           return res.text();
         }).then(function(){
