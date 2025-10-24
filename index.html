@@ -59,17 +59,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="preload" as="style" href="assets/vendor/bootstrap-icons/bootstrap-icons.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"></noscript>
+  <link rel="preload" as="font" type="font/woff2" href="assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2?e34853135f9e39acf64315236852cd5a" crossorigin>
+  <link rel="preload" as="style" href="assets/vendor/aos/aos.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="assets/vendor/aos/aos.css" rel="stylesheet"></noscript>
+  <link rel="preload" as="style" href="assets/vendor/glightbox/css/glightbox.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"></noscript>
+  <link rel="preload" as="style" href="assets/vendor/swiper/swiper-bundle.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"></noscript>
   <link href="assets/css/main.css" rel="stylesheet">
 
   <!-- Theme Color -->
   <meta name="theme-color" content="#0ea28e">
 
-    <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <!-- Preload LCP hero image -->
+  <link rel="preload" as="image" href="assets/img/illustration/illustration-15.webp">
 
   <style>
     .project-card { height: 100%; border: 1px solid rgba(0,0,0,0.06); border-radius: 14px; overflow: hidden; background: #fff; }
@@ -84,7 +89,11 @@
     <div class="container position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <img src="assets/img/logo.png" alt="">
+        <picture>
+          <source type="image/avif" srcset="assets/img/logo.36x36.avif 1x">
+          <source type="image/webp" srcset="assets/img/logo.36x36.webp 1x">
+          <img src="assets/img/logo.36x36.png" alt="Devora Official - IT Solutions Logo" width="36" height="36" loading="eager" decoding="async">
+        </picture>
         <h1 class="sitename">Devora</h1>
       </a>
 
@@ -116,8 +125,9 @@
 
           <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right" data-aos-delay="200">
             <div class="hero-content">
-              <h1 class="hero-title" style="margin-top: -10px;">Premium Digital Solutions, Crafted with <i class="bi bi-heart-fill" style="color: #15c20c;"></i></h1>
-              <p class="hero-description">We design and build timeless digital experiences that blend creativity, precision, and purpose — made to leave a lasting impression.</p>
+              <h1 class="hero-title" style="margin-top: -10px;">Devora – Premium IT Solutions for Websites, Software, and Digital Growth <i class="bi bi-heart-fill" style="color: #15c20c;"></i></h1>
+              <h2 class="mt-2">Custom Web & Software Development Agency</h2>
+              <p class="hero-description">We design and build timeless digital experiences that blend creativity, precision, and purpose — made to leave a lasting impression. Devora Official delivers Premium IT Solutions and Software Development in India.</p>
               <div class="hero-actions">
                 <a href="#about" class="btn-primary">Start Your Journey</a>
               </div>
@@ -141,7 +151,11 @@
           <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="300">
             <div class="hero-visual">
               <div class="hero-image-wrapper">
-                <img src="assets/img/illustration/illustration-15.webp" class="img-fluid hero-image" alt="Hero Image">
+                <picture>
+                  <source type="image/avif" srcset="assets/img/illustration/illustration-15.546x364.avif 1x, assets/img/illustration/illustration-15.1092x728.avif 2x">
+                  <source type="image/webp" srcset="assets/img/illustration/illustration-15.546x364.webp 1x, assets/img/illustration/illustration-15.1092x728.webp 2x">
+                  <img src="assets/img/illustration/illustration-15.webp" class="img-fluid hero-image" alt="Hero Image" fetchpriority="high" loading="eager" decoding="async" width="546" height="364">
+                </picture>
                 <div class="floating-elements">
                   <div class="floating-card card-1">
                     <i class="bi bi-lightbulb"></i>
@@ -205,13 +219,21 @@
           <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
             <div class="visual-section">
               <div class="main-image-container">
-                <img src="assets/img/about/about-8.webp" alt="Professional team collaboration" class="img-fluid main-visual">
+                <picture>
+                  <source type="image/avif" srcset="assets/img/about/about-8.546x364.avif 1x, assets/img/about/about-8.1092x728.avif 2x">
+                  <source type="image/webp" srcset="assets/img/about/about-8.546x364.webp 1x, assets/img/about/about-8.1092x728.webp 2x">
+                  <img src="assets/img/about/about-8.webp" alt="Professional team collaboration" class="img-fluid main-visual" loading="lazy" decoding="async" width="546" height="364">
+                </picture>
                 <div class="overlay-card">
                   <div class="card-content">
                     <h4>Quality First</h4>
                     <p>At Devora, we prioritize quality in everything we do. We believe that quality is not just about meeting expectations, but exceeding them. </p>
                     <div class="card-icon" >
-                      <img src="assets/img/medal.png" alt="Quality First" class="img-fluid">
+                      <picture>
+                        <source type="image/avif" srcset="assets/img/medal.70x70.avif 1x">
+                        <source type="image/webp" srcset="assets/img/medal.70x70.webp 1x">
+                        <img src="assets/img/medal.70x70.png" alt="Quality First" class="img-fluid" loading="lazy" decoding="async" width="70" height="70">
+                      </picture>
                     </div>
                   </div>
                 </div>
@@ -220,10 +242,18 @@
               <div class="secondary-images">
                 <div class="row g-3">
                   <div class="col-6">
-                    <img src="assets/img/about/about-11.webp" alt="Team meeting" class="img-fluid secondary-img">
+                    <picture>
+                      <source type="image/avif" srcset="assets/img/about/about-11.265x177.avif 1x, assets/img/about/about-11.530x354.avif 2x">
+                      <source type="image/webp" srcset="assets/img/about/about-11.265x177.webp 1x, assets/img/about/about-11.530x354.webp 2x">
+                      <img src="assets/img/about/about-11.webp" alt="Team meeting" class="img-fluid secondary-img" loading="lazy" decoding="async" width="265" height="177">
+                    </picture>
                   </div>
                   <div class="col-6">
-                    <img src="assets/img/about/about-5.webp" alt="Office workspace" class="img-fluid secondary-img">
+                    <picture>
+                      <source type="image/avif" srcset="assets/img/about/about-5.265x177.avif 1x, assets/img/about/about-5.530x354.avif 2x">
+                      <source type="image/webp" srcset="assets/img/about/about-5.265x177.webp 1x, assets/img/about/about-5.530x354.webp 2x">
+                      <img src="assets/img/about/about-5.webp" alt="Office workspace" class="img-fluid secondary-img" loading="lazy" decoding="async" width="265" height="177">
+                    </picture>
                   </div>
                 </div>
               </div>
@@ -249,7 +279,11 @@
 
                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
             <article class="project-card h-100">
-              <img class="thumb" src="assets/img/projects/beverlynn.png" alt="Project thumbnail">
+              <picture>
+                <source type="image/avif" srcset="assets/img/projects/beverlynn.354x199.avif 1x, assets/img/projects/beverlynn.708x398.avif 2x">
+                <source type="image/webp" srcset="assets/img/projects/beverlynn.354x199.webp 1x, assets/img/projects/beverlynn.708x398.webp 2x">
+                <img class="thumb" src="assets/img/projects/beverlynn.354x199.png" alt="Beverlynn Group project thumbnail" loading="lazy" decoding="async" width="354" height="199">
+              </picture>
               <div class="p-3 p-lg-4">
                 <div class="d-flex gap-2 mb-2">
                   <span class="badge bg-warning-subtle text-warning">Brand</span>
@@ -266,7 +300,11 @@
 
           <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <article class="project-card h-100">
-              <img class="thumb" src="assets/img/projects/epharmacy.png" alt="Project thumbnail">
+              <picture>
+                <source type="image/avif" srcset="assets/img/projects/epharmacy.354x199.avif 1x, assets/img/projects/epharmacy.708x398.avif 2x">
+                <source type="image/webp" srcset="assets/img/projects/epharmacy.354x199.webp 1x, assets/img/projects/epharmacy.708x398.webp 2x">
+                <img class="thumb" src="assets/img/projects/epharmacy.354x199.png" alt="E-Pharmacy project thumbnail" loading="lazy" decoding="async" width="354" height="199">
+              </picture>
               <div class="p-3 p-lg-4">
                 <div class="d-flex gap-2 mb-2">
                   <span class="badge bg-success-subtle text-success">Web</span>
@@ -285,7 +323,11 @@
 
           <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
             <article class="project-card h-100">
-              <img class="thumb" src="assets/img/projects/creative.png" alt="Project thumbnail">
+              <picture>
+                <source type="image/avif" srcset="assets/img/projects/creative.354x199.avif 1x, assets/img/projects/creative.708x398.avif 2x">
+                <source type="image/webp" srcset="assets/img/projects/creative.354x199.webp 1x, assets/img/projects/creative.708x398.webp 2x">
+                <img class="thumb" src="assets/img/projects/creative.354x199.png" alt="Creative Web Crafters project thumbnail" loading="lazy" decoding="async" width="354" height="199">
+              </picture>
               <div class="p-3 p-lg-4">
                 <div class="d-flex gap-2 mb-2">
                   <span class="badge bg-danger-subtle text-danger">Website</span>
@@ -342,18 +384,18 @@
         }
       </script>
       <div class="swiper-wrapper align-items-center">
-        <div class="swiper-slide"><img src="assets/img/clients/beverlynn.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/clients/creative.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/clients/beverlynn.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/clients/creative.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/clients/beverlynn.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/clients/creative.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/clients/beverlynn.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/clients/creative.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/beverlynn.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/creative.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/beverlynn.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/creative.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><picture><source type="image/avif" srcset="assets/img/clients/beverlynn.200x80.avif"><source type="image/webp" srcset="assets/img/clients/beverlynn.200x80.webp"><img src="assets/img/clients/beverlynn.200x80.png" class="img-fluid" alt="Beverlynn client logo" loading="lazy" decoding="async"></picture></div>
+        <div class="swiper-slide"><picture><source type="image/avif" srcset="assets/img/clients/creative.200x80.avif"><source type="image/webp" srcset="assets/img/clients/creative.200x80.webp"><img src="assets/img/clients/creative.200x80.png" class="img-fluid" alt="Creative Web Crafters client logo" loading="lazy" decoding="async"></picture></div>
+        <div class="swiper-slide"><picture><source type="image/avif" srcset="assets/img/clients/beverlynn.200x80.avif"><source type="image/webp" srcset="assets/img/clients/beverlynn.200x80.webp"><img src="assets/img/clients/beverlynn.200x80.png" class="img-fluid" alt="Beverlynn client logo" loading="lazy" decoding="async"></picture></div>
+        <div class="swiper-slide"><picture><source type="image/avif" srcset="assets/img/clients/creative.200x80.avif"><source type="image/webp" srcset="assets/img/clients/creative.200x80.webp"><img src="assets/img/clients/creative.200x80.png" class="img-fluid" alt="Creative Web Crafters client logo" loading="lazy" decoding="async"></picture></div>
+        <div class="swiper-slide"><picture><source type="image/avif" srcset="assets/img/clients/beverlynn.200x80.avif"><source type="image/webp" srcset="assets/img/clients/beverlynn.200x80.webp"><img src="assets/img/clients/beverlynn.200x80.png" class="img-fluid" alt="Beverlynn client logo" loading="lazy" decoding="async"></picture></div>
+        <div class="swiper-slide"><picture><source type="image/avif" srcset="assets/img/clients/creative.200x80.avif"><source type="image/webp" srcset="assets/img/clients/creative.200x80.webp"><img src="assets/img/clients/creative.200x80.png" class="img-fluid" alt="Creative Web Crafters client logo" loading="lazy" decoding="async"></picture></div>
+        <div class="swiper-slide"><picture><source type="image/avif" srcset="assets/img/clients/beverlynn.200x80.avif"><source type="image/webp" srcset="assets/img/clients/beverlynn.200x80.webp"><img src="assets/img/clients/beverlynn.200x80.png" class="img-fluid" alt="Beverlynn client logo" loading="lazy" decoding="async"></picture></div>
+        <div class="swiper-slide"><picture><source type="image/avif" srcset="assets/img/clients/creative.200x80.avif"><source type="image/webp" srcset="assets/img/clients/creative.200x80.webp"><img src="assets/img/clients/creative.200x80.png" class="img-fluid" alt="Creative Web Crafters client logo" loading="lazy" decoding="async"></picture></div>
+        <div class="swiper-slide"><picture><source type="image/avif" srcset="assets/img/clients/beverlynn.200x80.avif"><source type="image/webp" srcset="assets/img/clients/beverlynn.200x80.webp"><img src="assets/img/clients/beverlynn.200x80.png" class="img-fluid" alt="Beverlynn client logo" loading="lazy" decoding="async"></picture></div>
+        <div class="swiper-slide"><picture><source type="image/avif" srcset="assets/img/clients/creative.200x80.avif"><source type="image/webp" srcset="assets/img/clients/creative.200x80.webp"><img src="assets/img/clients/creative.200x80.png" class="img-fluid" alt="Creative Web Crafters client logo" loading="lazy" decoding="async"></picture></div>
+            <div class="swiper-slide"><picture><source type="image/avif" srcset="assets/img/clients/beverlynn.200x80.avif"><source type="image/webp" srcset="assets/img/clients/beverlynn.200x80.webp"><img src="assets/img/clients/beverlynn.200x80.png" class="img-fluid" alt="Beverlynn client logo" loading="lazy" decoding="async"></picture></div>
+            <div class="swiper-slide"><picture><source type="image/avif" srcset="assets/img/clients/creative.200x80.avif"><source type="image/webp" srcset="assets/img/clients/creative.200x80.webp"><img src="assets/img/clients/creative.200x80.png" class="img-fluid" alt="Creative Web Crafters client logo" loading="lazy" decoding="async"></picture></div>
           </div>
         </div>
 
@@ -382,7 +424,7 @@
               <p>Giving my project to Devora was one of my best choice in life, The Software, The Team, The Support, The Everything was great.</p>
               <div class="client-info">
                 <div class="client-image">
-                  <img src="assets/img/person/person1.jpg" alt="Client">
+                  <img src="assets/img/person/person1.jpg" alt="Client photo - Mr. Manrajsingh" loading="lazy" decoding="async" width="50" height="50">
                 </div>
                 <div class="client-details">
                   <h3>Mr. Manrajsingh</h3>
@@ -400,7 +442,7 @@
               <p>Exceptional service delivery and innovative solutions have transformed our simple looking website into a modern and professional website, leading to remarkable growth and enhanced customer satisfaction across all touchpoints.</p>
               <div class="client-info">
                 <div class="client-image">
-                  <img src="assets/img/person/person2.jpg" alt="Client">
+                  <img src="assets/img/person/person2.jpg" alt="Client photo - Mr. Jaivik" loading="lazy" decoding="async" width="50" height="50">
                 </div>
                 <div class="client-details">
                   <h3>Mr. Jaivik</h3>
@@ -418,7 +460,7 @@
               <p>Working with Devora was a pleasure, The Team was professional, The Support was great, The Everything was great.</p>
               <div class="client-info">
                 <div class="client-image">
-                  <img src="assets/img/person/person3.jpg" alt="Client">
+                  <img src="assets/img/person/person3.jpg" alt="Client photo - Mr. Kishan Patel" loading="lazy" decoding="async" width="50" height="50">
                 </div>
                 <div class="client-details">
                   <h3>Mr. Kishan Patel</h3>
@@ -461,7 +503,7 @@
           </div>
           <div class="col-lg-6">
             <div class="hero-visual" data-aos="fade-left" data-aos-delay="150">
-              <img src="assets/img/services/services-1.webp" alt="Services" class="img-fluid">
+              <img src="assets/img/services/services-1.webp" alt="Services" class="img-fluid" loading="lazy" decoding="async" width="546" height="364">
             </div>
           </div>
         </div>
