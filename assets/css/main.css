@@ -604,7 +604,7 @@ h6 {
 .scroll-top.active {
   visibility: visible;
   opacity: 1;
-  bottom: 15px;
+  bottom: 30px;
 }
 
 /*--------------------------------------------------------------
@@ -660,7 +660,7 @@ section,
 .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 60px 0;
+  padding: 30px 0;
   scroll-margin-top: 90px;
   overflow: clip;
 }
@@ -846,6 +846,13 @@ section,
   .hero .hero-content .hero-stats {
     flex-direction: column;
     gap: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .hero .hero-visual .hero-image-wrapper .hero-image{
+    margin-top: 30px;
   }
 }
 
@@ -2193,12 +2200,44 @@ section,
   height: auto;
 }
 
-.clients .swiper-slide img {
-  transition: 0.3s;
+/* Continuous horizontal scroll for .init-swiper
+   - Adjust --swiper-scroll-duration (e.g. 20s) to speed up / slow down
+   - Pauses on hover for accessibility */
+.init-swiper {
+  overflow: hidden; /* ensure no scrollbar during animation */
 }
 
-.clients .swiper-slide img:hover {
-  transform: scale(1.1);
+.init-swiper .swiper-wrapper {
+  display: flex;               /* align slides inline */
+  align-items: center;
+  gap: 0;
+  will-change: transform;
+  animation: swiper-scroll-left var(--swiper-scroll-duration, 5s) linear infinite;
+}
+
+/* Prevent slides from shrinking and preserve natural width */
+.init-swiper .swiper-slide {
+  flex: 0 0 auto;
+}
+
+/* Pause on hover (useful for desktop users) */
+.init-swiper:hover .swiper-wrapper {
+  animation-play-state: paused;
+}
+
+/* If Swiper JS is adding transforms, prefer the CSS animation by increasing priority */
+.init-swiper .swiper-wrapper.swiper-translate {
+  animation: swiper-scroll-left var(--swiper-scroll-duration, 20s) linear infinite !important;
+}
+
+/* Keyframes: translate left continuously */
+@keyframes swiper-scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /*--------------------------------------------------------------
