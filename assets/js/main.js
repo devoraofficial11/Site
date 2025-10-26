@@ -183,9 +183,52 @@
   });
 
   /**
-   * Navmenu Scrollspy
+   * Smooth scroll to section
    */
-  let navmenulinks = document.querySelectorAll('.navmenu a');
+  function scrollToSection(hash) {
+    const section = document.querySelector(hash);
+    if (section) {
+      const scrollMarginTop = getComputedStyle(section).scrollMarginTop;
+      window.scrollTo({
+        top: section.offsetTop - parseInt(scrollMarginTop),
+        behavior: 'smooth'
+      });
+    }
+  }
+
+  /**
+   * Navmenu Scrollspy and Smooth Scrolling
+   */
+  const navmenulinks = document.querySelectorAll('.navmenu a');
+
+  // Handle click events on navigation links and logo
+  function handleNavigationClick(e) {
+    e.preventDefault();
+    const hash = this.getAttribute('href');
+    // Update URL without adding to history
+    history.replaceState(null, null, ' ');
+    scrollToSection(hash);
+    
+    // Update active state for nav links (skip for logo)
+    if (this.classList.contains('navmenu-link')) {
+      document.querySelectorAll('.navmenu a.active').forEach(link => link.classList.remove('active'));
+      this.classList.add('active');
+    }
+  }
+
+  // Add click handler to navigation links
+  navmenulinks.forEach(link => {
+    if (link.hash) {
+      link.classList.add('navmenu-link');
+      link.addEventListener('click', handleNavigationClick);
+    }
+  });
+
+  // Add click handler to logo
+  const logoLink = document.querySelector('.logo[href="#hero"]');
+  if (logoLink) {
+    logoLink.addEventListener('click', handleNavigationClick);
+  }
 
   function navmenuScrollspy() {
     navmenulinks.forEach(navmenulink => {
