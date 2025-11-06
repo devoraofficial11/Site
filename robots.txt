@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://devoraofficial.onrender.com/sitemap.xml
+Sitemap: https://devora.live/sitemap.xml
+
