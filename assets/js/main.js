@@ -248,3 +248,25 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+
+// Disble right-click context menu and certain keyboard shortcuts
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+
+document.addEventListener('keydown', function(e) {  
+  // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+  if (e.key === 'F12' || 
+      (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' ) ) || 
+      (e.ctrlKey && e.key === 'U')) {
+    e.preventDefault();
+  }
+});
+
+// Disable Ctrl + U
+document.addEventListener('keydown', function(e) {
+  if (e.ctrlKey && e.key === 'u') {
+    e.preventDefault();
+  }
+});
