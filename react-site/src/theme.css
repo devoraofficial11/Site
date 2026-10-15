@@ -81,6 +81,11 @@ section { scroll-margin-top: 90px; }
 .contact .contact-form .form-control, .contact .contact-form .form-select { color: var(--heading-color); background-color: var(--background-color); border-color: var(--border-color); }
 .contact .contact-form .form-control::placeholder { color: var(--default-color); opacity: .7; }
 .faq-item summary { color: var(--heading-color); font-size: 18px; font-weight: 600; cursor: pointer; }
+.faq .faq-container .faq-item > .faq-content { display: grid; grid-template-rows: 0fr; visibility: hidden; opacity: 0; transition: grid-template-rows .3s ease, opacity .2s ease, visibility .2s ease; }
+.faq .faq-container .faq-item > .faq-content > p { min-height: 0; margin: 0; overflow: hidden; color: var(--default-color); }
+.faq .faq-container .faq-item[open] > .faq-content { grid-template-rows: 1fr; visibility: visible; opacity: 1; padding-top: 10px; }
+.faq .faq-container .faq-item[open] > summary { color: var(--accent-color); }
+.faq .faq-container .faq-item .faq-content a { color: var(--accent-color); }
 .header .container { min-height: 44px; }
 .header-utilities .btn-getstarted { white-space: nowrap; }
 .header .logo img { flex: 0 0 auto; }
@@ -164,3 +169,16 @@ body, .header, .footer, .project-card, .contact-form, .price-card, .testimonial-
 @media (max-width: 1199px) {
   .mobile-nav-toggle { border: 0; background: transparent; }
 }
+
+.testimonial-carousel { max-width: 760px; margin-inline: auto; }
+.testimonial-slide { max-width: 700px; margin: 0 auto; animation: testimonial-fade-in .38s ease both; }
+.testimonial-slide .testimonial-content { min-height: 250px; }
+.testimonial-controls { display: flex; align-items: center; justify-content: center; gap: 18px; margin-top: 24px; }
+.testimonial-arrow { display: grid; place-items: center; width: 38px; height: 38px; border: 1px solid var(--border-color); border-radius: 50%; background: var(--surface-color); color: var(--heading-color); transition: background-color .2s ease, border-color .2s ease, color .2s ease; }
+.testimonial-arrow:hover, .testimonial-arrow:focus-visible { border-color: var(--accent-color); color: var(--accent-color); }
+.testimonial-dots { display: flex; align-items: center; gap: 9px; }
+.testimonial-dot { width: 9px; height: 9px; padding: 0; border: 0; border-radius: 50%; background: color-mix(in srgb, var(--default-color), transparent 60%); transition: width .2s ease, background-color .2s ease; }
+.testimonial-dot.is-active { width: 24px; border-radius: 9px; background: var(--accent-color); }
+@keyframes testimonial-fade-in { from { opacity: .35; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 575px) { .testimonial-carousel { padding-inline: 4px; } .testimonial-slide .testimonial-content { min-height: 0; } }
+@media (prefers-reduced-motion: reduce) { .testimonial-slide { animation: none; } .testimonial-arrow, .testimonial-dot { transition: none; } }

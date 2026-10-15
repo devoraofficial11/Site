@@ -6,7 +6,7 @@ return (
       <div className="container section-title">
         <span className="description-title">Pricing</span>
         <h2>Pricing</h2>
-        <p>Affordable pricing plans to suit your budget</p>
+        <p>Choose a starting point for your project. Final scope is tailored to your requirements.</p>
       </div>
 
       <div className="container">
@@ -16,22 +16,21 @@ return (
           <div className="col-lg-4">
             <article className="price-card h-100">
               <div className="card-head">
-                <span className="badge-title">Silver Box</span>
-                <h3 className="title">Starting at <b>₹ 8000</b></h3>
-                <p className="subtitle">Silver Box is a basic plan that offers a range of features to help you get started
-                  with your website.</p>
+                <span className="badge-title">Website</span>
+                <h3 className="title">Starting from <b>₹ 15,000</b></h3>
+                <p className="subtitle">A polished, responsive website with the essentials to establish your business online.</p>
 
               </div>
 
               <ul className="feature-list list-unstyled mb-4">
-                <li><i className="bi bi-check-circle"></i> Up to 5 Pages</li>
-                <li><i className="bi bi-check-circle"></i> Responsive Design</li>
-                <li><i className="bi bi-check-circle"></i> Basic SEO</li>
-                <li><i className="bi bi-check-circle"></i> Contact Form Attach</li>
+                <li><i className="bi bi-check-circle"></i> Up to 5 pages</li>
+                <li><i className="bi bi-check-circle"></i> Mobile-friendly design</li>
+                <li><i className="bi bi-check-circle"></i> Essential on-page SEO</li>
+                <li><i className="bi bi-check-circle"></i> Contact form setup</li>
               </ul>
 
               <div className="cta">
-                <a href="#contact" className="btn btn-choose w-100">Get Started</a>
+                <a href="#contact" className="btn btn-choose w-100">Discuss a Website</a>
               </div>
             </article>
           </div>
@@ -41,23 +40,22 @@ return (
               <div className="ribbon"><i className="bi bi-star-fill"></i> Popular</div>
 
               <div className="card-head">
-                <span className="badge-title">Gold Box</span>
-                <h3 className="title">Starting at <b>₹ 15000</b></h3>
-                <p className="subtitle">Gold Box is a premium plan that offers a range of features to help you get started
-                  with your website.</p>
+                <span className="badge-title">Website + Custom Software</span>
+                <h3 className="title">Starting from <b>₹ 40,000</b></h3>
+                <p className="subtitle">A business website paired with custom tools for the workflows behind it.</p>
 
               </div>
 
               <ul className="feature-list list-unstyled mb-4">
-                <li><i className="bi bi-check-circle"></i> Up to 10 Pages</li>
-                <li><i className="bi bi-check-circle"></i> Responsive Design</li>
-                <li><i className="bi bi-check-circle"></i> On-Page SEO Optimization</li>
-                <li><i className="bi bi-check-circle"></i> Unlimited Reviews</li>
-                <li><i className="bi bi-check-circle"></i> Email Support</li>
+                <li><i className="bi bi-check-circle"></i> Business website and responsive design</li>
+                <li><i className="bi bi-check-circle"></i> Custom admin dashboard</li>
+                <li><i className="bi bi-check-circle"></i> Software features matched to your workflow</li>
+                <li><i className="bi bi-check-circle"></i> Website and software integration</li>
+                <li><i className="bi bi-check-circle"></i> Setup and handover</li>
               </ul>
 
               <div className="cta">
-                <a href="#contact" className="btn btn-choose w-100">Choose Pro</a>
+                <a href="#contact" className="btn btn-choose w-100">Discuss a Website + Software Plan</a>
               </div>
             </article>
           </div>
@@ -65,23 +63,22 @@ return (
           <div className="col-lg-4">
             <article className="price-card h-100">
               <div className="card-head">
-                <span className="badge-title">Diamond Box</span>
-                <h3 className="title">Starting at <b>₹ 30000</b></h3>
-                <p className="subtitle">Diamond Box is a premium plan that offers a range of features to help you get
-                  started with your website.</p>
+                <span className="badge-title">Custom ERP / CRM</span>
+                <h3 className="title">Starting from <b>₹ 60,000</b></h3>
+                <p className="subtitle">A full-fledged custom system for managing business operations, customers, and reporting.</p>
               </div>
 
               <ul className="feature-list list-unstyled mb-4">
-                <li><i className="bi bi-check-circle"></i> All Features from Gold Box +</li>
-                <li><i className="bi bi-check-circle"></i> Inquiry Forms and many more</li>
-                <li><i className="bi bi-check-circle"></i> Responsive Design</li>
-                <li><i className="bi bi-check-circle"></i> On-Page SEO Optimization</li>
-                <li><i className="bi bi-check-circle"></i> Fully Customizable</li>
-                <li><i className="bi bi-check-circle"></i> Free Server Hosting for 1 Year</li>
+                <li><i className="bi bi-check-circle"></i> Custom ERP or CRM modules</li>
+                <li><i className="bi bi-check-circle"></i> Role-based access and permissions</li>
+                <li><i className="bi bi-check-circle"></i> Workflow automation</li>
+                <li><i className="bi bi-check-circle"></i> Reports and business dashboards</li>
+                <li><i className="bi bi-check-circle"></i> Integrations scoped to your needs</li>
+                <li><i className="bi bi-check-circle"></i> Implementation and handover</li>
               </ul>
 
               <div className="cta">
-                <a href="#contact" className="btn btn-choose w-100">Start Business</a>
+                <a href="#contact" className="btn btn-choose w-100">Discuss ERP / CRM Software</a>
               </div>
             </article>
           </div>

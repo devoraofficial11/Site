@@ -2,6 +2,7 @@ const existingProjects = [
   { id: 'kalpataru', title: 'Kalpataru Polpack', image: './assets/img/projects/kalpataru.webp', tags: ['Website', 'Re-design'], description: 'A company website showcasing Kalpataru Polpack’s woven packaging products and services.', result: 'Improved website performance by 70%', href: 'https://kalpack.in/' },
   { id: 'bhagwati', title: 'Shri Bhagwati Poly Pack', image: './assets/img/projects/bhagwatipoly.webp', tags: ['Website', 'Design'], description: 'A product-focused website introducing Shri Bhagwati Poly Pack and its flexible packaging solutions.', result: 'Brought the company’s products and services online', href: 'https://shribhagwatipolypack.in/' },
   { id: 'epharmacy', title: 'E-Pharmacy', image: './assets/img/projects/epharmacy.webp', tags: ['Software', 'E-Commerce'], description: 'A web application concept for browsing and purchasing medicines and everyday health products online.', result: 'Product discovery and online ordering in one place', type: 'Personal Project', icon: 'bi-person-workspace' },
+  { id: 'rishi-ayurveda', title: 'Rishi Ayurveda', image: './assets/img/projects/rishiAyurveda.webp', tags: ['Software', 'Custom ERP'], description: 'Custom business software built to streamline day-to-day operations for Rishi Ayurveda.', result: 'Boosted productivity by 50% and reduced monthly operating costs', type: 'Client Project', icon: 'bi-building-gear' },
 ];
 
 const healthcareProjects = [
